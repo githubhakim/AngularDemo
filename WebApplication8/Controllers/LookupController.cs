@@ -24,12 +24,12 @@ namespace MyKitchen.Web.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    public class LookupController : ControllerBase
+    public class LookupController : ControllerBase 
     {
 
         LookupMgr _menuMgr = new LookupMgr();
         
-        
+        // adding some comments 
 
         [HttpGet("[action]/{lookupName}")]
         public List<DtoLookup> GetAll(string lookupName)
