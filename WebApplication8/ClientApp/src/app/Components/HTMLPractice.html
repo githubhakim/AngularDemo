@@ -1,0 +1,427 @@
+
+<form #form="ngForm">
+
+  <!-- Modal content -->
+
+
+  <div id="myModal" [ngStyle]="modalStatus" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" id="btnCloseModal">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+
+  </div>
+  <!-- modal content-->
+
+  <input type="button" id="btnOpenModal" value="Open Modal" />
+  <div class="container-fluid" style="background-color:green;color:brown;height:200px">
+    <h3> check the sticky list below </h3>
+    <p>this is a paragraph</p>
+    <strong> this text is very strong</strong>
+  </div>
+  <br />
+  <div class=" row">
+    <nav class="col-sm-3">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+        <li class="active"><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+      </ul>
+    </nav>
+    <div class="col-sm-9" style="border:medium">
+      <h1>this is some text </h1>
+      <h1>this is some text </h1>
+      <h1>this is some text </h1>
+      <h1>this is some text </h1><h1>this is some text </h1>
+      <h1>this is some text </h1>
+      <h1>this is some text </h1>
+
+
+    </div>
+
+  </div>
+  <!-- alert boxes -->
+  <br />
+  <div class="row">
+
+    <a href="javascript:void(0)" >not going to do any action 'javascript:void(0)'</a>
+    <div id="divTest" [ngClass]="{'alert alert-success' : true}">some value in test div {{form.submitted}}</div>
+
+    <h2> alerts</h2>
+    <div class="alert alert-success" style="width:50%;margin:50px;padding:50px">
+      <strong>success</strong> this is very sussessfull
+    </div>
+
+    <!--dismissable message-->
+    <div class="alert alert-info alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" arial-label="close">&times;</a>
+      <strong>info</strong> this is some info
+    </div>
+
+    <div class="alert alert-warning">
+      <strong> warning</strong> this is the last warning for you
+    </div>
+
+    <div class="alert alert-danger">
+      <strong>danger</strong> this is danger
+    </div>
+
+
+  </div>
+
+
+  <!-- badges-->
+  <div class="row">
+    <p>Badges</p>
+    <a href="#"> <span class="badge">10</span></a>
+    <a href="#"> <span class="badge">3000</span></a>
+
+  </div>
+
+  <div class="row">
+    <div class="col-xs-9">.col-xs-9</div>
+    <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+
+  </div>
+
+  <div class="row" style="border-style:solid;border-color:red;">
+    <div id="divContainer" style="border-radius:10px;margin-top:10px;border-width:2px;border-style:solid!important;padding-bottom:5px" class="divAddtion col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+    <br style="height:1px" /> <div style="clear:right; border-style:solid;">no style div</div>
+    <div style="border-style:solid; top:70px;left:70px;text-align:center;white-space:normal; overflow-y:hidden;white-space:nowrap;width:50px">float right this is it sdfsd sf sfsd sdf</div>
+    <div style="border-style:solid; float:left;display:block;opacity:0.5;">float left</div> <br />
+    <div style="border-style:solid; display:block;clear;opacity:0.5;">block</div>
+    <div style="border-style:solid;z-index:30;background-color:yellow; float:right;;">float right</div>
+
+    <div style="border-style:solid; position:fixed; background-color:green;top:10px;width:50px;height:10px; left:20px;">fix position</div>
+    <div style="border-style:solid; position:absolute; background-color:red;top:20px;width:50px;height:50px; left:30px;">absolute position</div>
+    <div style="border-style:solid;z-index=3; position:sticky; background-color:purple;top:40px;width:50px;height:50px; left:30px;">sticky position</div>
+  </div>
+
+  <ul>
+    <li style="display:table;border:solid">item </li>
+    <li style="display:table;border:solid">item </li>
+    <li style="display:table;border:solid">item </li>
+
+  </ul>
+
+
+
+  <div class="row" style="border:solid">
+
+    <div style="position: relative;float:left;width:70%; margin:auto;border:solid">
+      <img src="/assets/02th-egg-person.jpg" style="border-radius:50%;float:left;margin-right:15px;width:100px;height:100px" />
+
+
+
+      <div style="background-image:linear-gradient(rgba(33, 187, 178, 0.27), rgba(209, 200, 200, 0.73));position:absolute;width:50%;overflow:auto;height:100px;bottom:0px;left:115px;border:solid;vertical-align:middle">sf sdsf we w er greg reg reg reg re gre grg regre reg reg erg reg rere gre g</div>
+    </div>
+  </div>
+
+
+  <div class="row" style="border:10px solid transparent red;">
+    <a href="#" target="_blank">sdfdsfsdf</a>
+    <input type="text" style="width:40px;transition:width 0.4s ease-in-out" />
+  </div>
+
+  <div class="row">
+    <div class="col-md-9"> first col 9 cells</div>
+    <div class="col-sm-3"> second col 4 cells</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+    <!-- Add the extra clearfix for only the required viewport -->
+    <div class="clearfix "></div>
+
+    <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  </div>
+
+
+  <div class="row">
+    <div class="row">
+      <div class="col-sm-3">.col-sm-3 </div>
+      <div style="border:solid" class="col-md-offset-3 col-md-3">.col-xs-6 .col-sm-3</div>
+    </div>
+    <div class="row">
+      <h1> this is big text <small>this is small text</small> <mark>and thid is marked text</mark></h1>
+      <u>this is underlined </u> <s> this txt is hashed out</s>
+      <b>this txt is bold </b>
+      <strong>this is bold too</strong>
+      <p>this is paragraph </p>
+      free txt
+      <i>this txt is italic</i>
+      <h6>h6</h6>
+      <h5>h5</h5>
+      <h4>h4</h4>
+      <h3>h3</h3>
+      <h2>h2</h2>
+      <h1>h1</h1>
+
+    </div>
+    <div class="row" style="border:solid">
+      <div class="col-md-3 " style="border:solid">
+        <p class="text-left">Left aligned text.</p>
+        <p class="text-center">Center aligned text.</p>
+        <p class="text-right">Right aligned text.</p>
+        <p class="text-justify">Justified text.</p>
+        <p class="text-nowrap">No wrap text sf wef we wef wef we wef wef ewf wef wef wew weew wewe w.</p>
+        <br />
+        <ul class="list-inline">
+          <li>item 1</li>
+          <li>item 1</li>
+          <li>item 1</li>
+        </ul>
+        <ul class="inline-block">
+          <li>item 1</li>
+          <li>item 1</li>
+          <li>item 1</li>
+        </ul>
+        <dl class="dl-horizontal">
+          <dt>ergegrg ergre </dt>
+          <dd>egerg erg regreg reg </dd>
+        </dl>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>head1 </th>
+            <th>head1 </th>
+            <th>head1 </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="">
+            <td>val</td>
+            <td>val</td>
+            <td>val</td>
+          </tr>
+          <tr class="danger">
+            <td>val</td>
+            <td>val</td>
+            <td>val</td>
+          </tr>
+          <tr>
+            <td>val</td>
+            <td>val</td>
+            <td>val</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="form-group form-horizontal">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+      </div>
+    </div>
+
+
+  </div>
+  <div class="row">
+    <div class="row form-inline">
+      <div class="form-group">
+        <label for="exampleInputName2">Name</label>
+        <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+      </div>
+      </div>
+    </div>
+    <div class="row" style="clear:both">
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <fieldset disabled>
+        <div class="form-group">
+          <label for="disabledTextInput">Disabled input</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+        </div>
+        <div class="form-group">
+          <label for="disabledSelect">Disabled select menu</label>
+          <select id="disabledSelect" class="form-control">
+            <option>Disabled select</option>
+          </select>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Can't check this
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+    </div>
+    <div class="row">
+      <div class="form-group has-success has-feedback">
+        <label class="control-label" for="inputSuccess1">Input with success</label>
+        <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+        <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+      </div>
+      <div class="form-group has-warning">
+        <label class="control-label" for="inputWarning1">Input with warning</label>
+        <input type="text" class="form-control" id="inputWarning1">
+      </div>
+      <div class="form-group has-error">
+        <label class="control-label" for="inputError1">Input with error</label>
+        <input type="text" class="form-control" id="inputError1">
+      </div>
+      <div class="has-success">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="checkboxSuccess" value="option1">
+            Checkbox with success
+          </label>
+        </div>
+      </div>
+      <div class="has-warning">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="checkboxWarning" value="option1">
+            Checkbox with warning
+          </label>
+        </div>
+      </div>
+      <div class="has-error">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="checkboxError" value="option1">
+            Checkbox with error
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group has-success has-feedback">
+        <label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
+          <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+          <span id="inputSuccess3Status" class="sr-only">(success)</span>
+        </div>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      first 
+    </div>
+    <div class="col-md-6" style="height:300px;overflow:auto">
+      second
+      <div style="position:relative;left:5px;right:10px;top:50px;bottom:10px;background-color:red;z-index:400"> relative</div>
+      <div style="position:relative;left:15px;right:25px;top:60px;bottom:30px;background-color:green;"> another relative</div>
+
+      <div style="position:absolute;left:50px;right:50px;top:5px;bottom:50px;background-color:lightblue;">  absolute</div>
+      <div style="position:absolute;left:60px;right:70px;top:20px;bottom:60px;background-color:cornflowerblue"> another absolut</div>
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+
+      scssddsvvsdv sdvdsvsd svsdvsdd <br />
+
+
+      <div style="position:sticky;left:10px;right:13px;top:40px;bottom:10px;background-color:lightseagreen">sticky </div>
+    </div>
+  </div>
+
+</form>

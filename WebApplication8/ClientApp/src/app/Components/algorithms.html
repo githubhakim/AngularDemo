@@ -1,0 +1,38 @@
+<h1>Algorithms</h1>
+
+
+<label> Enter comma separated numbers</label>:
+<input type="text" #numbers />
+<button (click)="GetMaxRepeatNumber($event) "> Get Max Number</button>
+
+<label>{{maxNumber.number}}</label>
+<label>{{maxNumber.tempString}}</label>
+<label>{{JSPracctic()}}</label>
+
+<br />
+
+<label>Validate code prackets match</label>
+<label> Enter Code segment: </label>
+<input type="text" [(ngModel)]="codeSegment" />
+<button (click)="ValidateCodeSegment() "> Validate</button>
+
+<label>{{codeSegmentValid}}</label>
+
+<br /><br />
+<label> Reverse array in place result  : {{ReverseArrayInPlace()}}</label>
+<br /><br />
+<label> Get Max Sequence: {{GetMaxSequence()}}</label>
+
+<div>{{GetInputVariations()}}</div>
+
+<div>odd numbers  {{EvenNumbersFirst()}}</div>
+
+<div>ValidatePracitseExtened{{ValidatePracitseExtened()}}</div>
+
+<div class="row">
+  <Todo></Todo>
+</div>
+
+<div class="row">
+  <XO></XO>
+</div>

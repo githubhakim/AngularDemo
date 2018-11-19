@@ -1,0 +1,34 @@
+
+<form >
+
+  <h3> Add todos below : </h3>
+  <div class="container">
+    <div class="row">
+      <input type="text" [(ngModel)]="newtoDo" name="txtNewItem" />
+      <button type="button" name="btnAddToDo" (click)="Add()"> Add </button>
+
+      <br />    <br />
+      <div class="row">
+        <ul name="lstTodos">
+          <li *ngFor="let item of toDoList; let i=index" style="border-radius:3px 3px; display:block;border-style:solid;border-width:1px;background-color:lightblue;cursor:pointer;width:150px" (click)="MarkItem(i)">
+            <a href="javascript:void(0)" style="display:block" (click)="MarkItem(i)"> {{item}} </a>
+          </li>
+        </ul>
+      </div>
+      <br />
+      <div class="row" *ngIf="toDoCompletedList.length > 0">
+        Completed items:
+        <ul name="toDoCompletedList">
+          <li *ngFor="let item of toDoCompletedList">
+            {{item}}
+
+          </li>
+        </ul>
+      </div>
+    </div>  
+
+  </div>
+  
+
+  
+</form>

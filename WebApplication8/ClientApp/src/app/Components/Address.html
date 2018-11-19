@@ -1,0 +1,70 @@
+
+<form #addressForm="ngForm">
+
+  <div class="container">
+    <div class="cover-spin" *ngIf="!regions"></div>
+    <div class="row">
+      <div class="col-sm-1">
+        <label>Address:</label>
+      </div>
+      <div class="col-sm-6">
+        <input type="text" name="txtAddress" #address="ngModel" [(ngModel)]="customer.address" required />
+
+
+        <div class="row" *ngIf="submitted || address.dirty">
+
+          <div class="row" *ngIf="address.errors?.required" style="color:red">address is required</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+        <label>Number:</label>
+      </div>
+      <div class="col-sm-1">
+        <input type="text" name="txtAddressNumber" placeholder="address Number" [(ngModel)]="customer.addressNumber" />
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1">
+        <label>Region:</label>
+
+      </div>
+      <div class="col-sm-5">
+
+
+        <select name="ddlRegion" #ddlRegion="ngModel" [(ngModel)]="customer.regionId" required>
+          <option [ngValue]="null">Select</option>
+          <option *ngFor="let item of regions" [value]="item.id" [selected]="item.id===customer.regionId">{{item.name | uppercase}}</option>
+
+        </select>
+        <div class="row" *ngIf="submitted || ddlRegion.dirty">
+          <div class="row" *ngIf="ddlRegion.errors?.required" style="color:red">region is required</div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1">
+        <label>Postal Code:</label>
+
+      </div>
+      <div class="col-sm-4">
+        <input type="text" name="txtpostalCode" required placeholder="postal code" [(ngModel)]="customer.postalCode" />
+
+      </div>
+
+
+    </div>
+  </div>
+  <br />
+
+  <input type="button" name="btnChange" (click)="onChange()" value="change address event" />
+  <input type="button" name="btnChangeServiceMessage" (click)="onChangeServiceMessage()" value="change service message " />
+</form>
