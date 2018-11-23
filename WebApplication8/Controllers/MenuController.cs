@@ -19,13 +19,13 @@ namespace MyKitchen.Web.Controllers
 
         MenuMgr _menuMgr = new MenuMgr();
         
-
+        //ddfdfd
         public MenuController()
         {
             
         }
 
-        
+           
         
 
         [HttpGet("[action]/{withDetails}")]
